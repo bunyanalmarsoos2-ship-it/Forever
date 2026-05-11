@@ -5,12 +5,12 @@ import ProductItem from "./ProductItem.jsx";
 
 const BestSellers = () => {
   const { products } = useContext(ShopContext);
-  console.log(products);
+  
   const [bestSeller, setBestSeller] = useState([]);
 
   useEffect(() => {
     const bestProduct = products.filter((item) => item.bestseller);
-    console.log(bestProduct);
+    
     setBestSeller(bestProduct.slice(0, 5));
   }, []);
   return (
